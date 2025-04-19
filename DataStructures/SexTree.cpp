@@ -18,7 +18,7 @@ public:
 	}
 
 	void update(int p, ll val){
-		for(t[p+=n] = {val};p>1;p>>=1)tree[p>>1] = tree[p]+t[p^1];
+		for(tree[p+=n] = {val};p>1;p>>=1)tree[p>>1] = tree[p]+tree[p^1];
 	}
 
 	ll query(int l,int r){
