@@ -1,0 +1,112 @@
+\input{preamble.tex}
+\begin{document}
+	\tableofcontents
+	
+	\newpage
+	
+	\section{Data structures}
+	
+	\subsection{Segment Tree}
+	\cppfile{../DataStructures/SexTree.cpp}
+	\newpage
+	\subsection{Merge Sort Tree}
+	\cppfile{../DataStructures/MergeSortTree.cpp}
+	\subsection{Fenwick Tree}
+	\cppfile{../DataStructures/FenwickTree.cpp}
+	\subsection{Sparse Table}
+	\cppfile{../DataStructures/SparseTable.cpp}
+	\newpage
+	\subsection{Disjoint Set Union}
+	\cppfile{../DataStructures/DSU.cpp}
+	\newpage
+	
+	% To add
+	%	Lazy
+	%	Persistent Sextree
+	%	Segment Tree multi dim
+	%	Wavelet Tree
+	%	Treap
+	%	Trie
+	%	BST
+	%	Link cut tree
+	%	Monotonic ds
+	
+	
+	
+	
+	
+	\section{Graphs}
+	\subsection{DFS}
+	\cppfile{../Graphs/dfs.cpp}
+	\subsection{BFS}
+	\cppfile{../Graphs/bfs.cpp}
+	\subsection{Topological Sort}
+	\cppfile{../Graphs/topoSort.cpp}
+	\subsection{Dijkstra}
+	
+	\subsection{Bellman-Ford}
+	
+	\subsection{Floyd-Warshall}
+	\subsection{SCC Kosaraju}
+	\cppfile{../Graphs/Scc.cpp}
+	\subsection{2-SAT}
+	\cppfile{../Graphs/2SAT.cpp}
+	\subsection{Euler Paths and cycles}
+	\subsubsection{Directed Graphs}
+	\cppfile{../Graphs/EulerPathsD.cpp}
+	\subsubsection{Unirected Graphs}
+	\cppfile{../Graphs/EulerPathsND.cpp}
+	
+	\newpage
+	
+	\section{Trees}
+	\subsection{LCA - Binary Lifting}
+	\subsubsection{Normal LCA}
+	\cppfile{../Trees/LCA.cpp}
+	\subsubsection{Min/Max weight on the path}
+	\cppfile{../Trees/MinMaxWeight.cpp}
+	\subsection{Centroid Decomposition}
+	\cppfile{../Trees/Centroid.cpp}
+	\subsection{Euler Tour Technique}
+	\subsection{Tree Matching}
+	\subsection{Diameter}
+	\cppfile{../Trees/Diameter.cpp}
+	\subsection{Heavy Light Decomposition}
+	\cppfile{../Trees/HLD.cpp}	
+	
+	\section{Math}
+	\
+	\subsection{Identities}
+	{
+		$C_n = \frac{2(2n-1)}{n+1} C_{n-1}$
+		
+		$C_n = \frac{1}{n+1} \binom{2n}{n}$
+		
+		$C_n \sim \frac{4^n}{n^{3/2}\sqrt{\pi}}$
+		
+		$\sigma(n) = O(\log(\log(n)))$ (number of divisors of $n$)
+		
+		$F_{2n+1} = F_{n}^2 + F_{n+1}^2$
+		
+		$F_{2n} = F_{n+1}^2 - F_{n-1}^2$
+		
+		$\sum_{i=1}^n F_i = F_{n+2}-1$
+		
+		$F_{n+i}F_{n+j} - F_nF_{n+i+j} = (-1)^n F_iF_j$
+		
+		(Möbius Inv. Formula)
+		Let $g(n) = \sum_{d\mid n} f(d)$, then $f(n)=\sum{d\mid n} g(d) \mu\left(\frac{n}{d})\right)$.
+	}
+	\subsection{Theorems}
+	
+	
+	\section{Strings}
+	\subsection{Suffix Array}
+	\cppfile{../SuffixArray/SuffixArray.cpp}
+	
+	
+	
+	\section{Others}
+	
+	
+\end{document}
