@@ -4,6 +4,11 @@
 	
 	\newpage
 	
+	\section{Template}
+	\cppfile{../plantilla.cpp}
+	
+	\newpage
+	
 	\section{Data structures}
 	
 	\subsection{Segment Tree}
@@ -11,17 +16,22 @@
 	\newpage
 	\subsection{Merge Sort Tree}
 	\cppfile{../DataStructures/MergeSortTree.cpp}
+	\newpage
 	\subsection{Fenwick Tree}
 	\cppfile{../DataStructures/FenwickTree.cpp}
+	\newpage
 	\subsection{Sparse Table}
 	\cppfile{../DataStructures/SparseTable.cpp}
 	\newpage
 	\subsection{Disjoint Set Union}
 	\cppfile{../DataStructures/DSU.cpp}
 	\newpage
+	\subsection{Lazy SegTree}
+	\subsubsection{Min/Max Range / Single Acces Element}
+	\cppfile{../DataStructures/LazyMinMaxSingle.cpp}
 	
 	% To add
-	%	Lazy
+	%	Lazy sum and assigment
 	%	Persistent Sextree
 	%	Segment Tree multi dim
 	%	Wavelet Tree
@@ -42,13 +52,38 @@
 	\cppfile{../Graphs/bfs.cpp}
 	\subsection{Topological Sort}
 	\cppfile{../Graphs/topoSort.cpp}
-	\subsection{Dijkstra}
+	\subsection{Flood Fill}
+	\cppfile{../Graphs/FloodFill.cpp}
 	
+	
+	\subsection{MST}
+	\subsubsection{Kruskal}
+	\cppfile{../Graphs/Kruskal.cpp}
+	
+	\newpage
+	
+	\subsubsection{Prims}
+	\cppfile{../Graphs/Prims.cpp}
+	
+	\subsection{Dijkstra}
+	\subsubsection{Implementation}
+	\cppfile{../Graphs/Dijkstra.cpp}
+	\subsubsection{Space-State graph}
+	\cppfile{../Graphs/StateSpace.cpp}
 	\subsection{Bellman-Ford}
+	\subsubsection{Path}
+	\cppfile{../Graphs/BellmanFordPath.cpp}
+	\subsubsection{Cycle}
+	\cppfile{../Graphs/BellmanFordCycle.cpp}
 	
 	\subsection{Floyd-Warshall}
+	\cppfile{../Graphs/FloydWarshall.cpp}
+	
 	\subsection{SCC Kosaraju}
 	\cppfile{../Graphs/Scc.cpp}
+	\subsection{Flows}
+	\subsubsection{Dinic}
+	\cppfile{../Graphs/Dinics.cpp}
 	\subsection{2-SAT}
 	\cppfile{../Graphs/2SAT.cpp}
 	\subsection{Euler Paths and cycles}
@@ -68,35 +103,34 @@
 	\subsection{Centroid Decomposition}
 	\cppfile{../Trees/Centroid.cpp}
 	\subsection{Euler Tour Technique}
+	\cppfile{../Trees/EulerTour.cpp}
 	\subsection{Tree Matching}
+	\cppfile{../Trees/TreeMatching.cpp}
 	\subsection{Diameter}
 	\cppfile{../Trees/Diameter.cpp}
 	\subsection{Heavy Light Decomposition}
 	\cppfile{../Trees/HLD.cpp}	
 	
 	\section{Math}
-	\
+	
 	\subsection{Identities}
-	{
-		$C_n = \frac{2(2n-1)}{n+1} C_{n-1}$
-		
-		$C_n = \frac{1}{n+1} \binom{2n}{n}$
-		
-		$C_n \sim \frac{4^n}{n^{3/2}\sqrt{\pi}}$
-		
-		$\sigma(n) = O(\log(\log(n)))$ (number of divisors of $n$)
-		
-		$F_{2n+1} = F_{n}^2 + F_{n+1}^2$
-		
-		$F_{2n} = F_{n+1}^2 - F_{n-1}^2$
-		
-		$\sum_{i=1}^n F_i = F_{n+2}-1$
-		
-		$F_{n+i}F_{n+j} - F_nF_{n+i+j} = (-1)^n F_iF_j$
-		
-		(Möbius Inv. Formula)
-		Let $g(n) = \sum_{d\mid n} f(d)$, then $f(n)=\sum{d\mid n} g(d) \mu\left(\frac{n}{d})\right)$.
-	}
+	
+	\subsubsection{Combi}
+	
+	\begin{center}
+	\includegraphics[width=5cm]{Combi2}
+	\includegraphics[width=5cm]{Combi}
+	\end{center}
+	
+	\subsubsection{XOR}
+	$$ a + b = a \oplus b + 2(a\& b)$$
+	$$a + b = a|b + a\&b$$
+	$$a \oplus b = a|b - a\&b$$
+	$$1\oplus 2\oplus 3 \oplus \dots \oplus(4k-1) = 0  k>=0$$
+	
+	
+	
+	
 	\subsection{Theorems}
 	
 	
@@ -107,6 +141,10 @@
 	
 	
 	\section{Others}
+	\subsection{Binpow}
+	\cppfile{../Others/binpow.cpp}
+	\subsection{Matrix exponentiation}
+	\cppfile{../Others/MatrixExp.cpp}
 	
 	
 \end{document}
