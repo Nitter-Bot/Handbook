@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.3.24)  18 APR 2025 20:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.3.24)  29 APR 2025 12:23
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -445,87 +445,136 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 (./Reference.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+)
+
+)
 \tf@toc=\write4
 \openout4 = `Reference.toc'.
 
 
 
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 10.
-(../DataStructures/SexTree.cpp)
-
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-(../DataStructures/MergeSortTree.cpp
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 8.
+ (../plantilla.cpp)
 
-) (../DataStructures/FenwickTree.cpp)
+(../DataStructures/SexTree.cpp)
 
-[2] (../DataStructures/SparseTable.cpp)
+[2] (../DataStructures/MergeSortTree.cpp)
+
+(../DataStructures/FenwickTree.cpp)
+
+[3] (../DataStructures/SparseTable.cpp)
 
 (../DataStructures/DSU.cpp)
 
-[3] (../Graphs/dfs.cpp) (../Graphs/bfs.cpp) (../Graphs/topoSort.cpp)
+[4] (../DataStructures/LazyMinMaxSingle.cpp
+
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[5] (../Graphs/dfs.cpp) (../Graphs/bfs.cpp) (../Graphs/topoSort.cpp)
+
+(../Graphs/FloodFill.cpp) (../Graphs/Kruskal.cpp)
+
+[6] (../Graphs/Prims.cpp) (../Graphs/Dijkstra.cpp)
+
+(../Graphs/StateSpace.cpp) (../Graphs/BellmanFordPath.cpp
+
+[7]) (../Graphs/BellmanFordCycle.cpp) (../Graphs/FloydWarshall.cpp)
 
 (../Graphs/Scc.cpp
 
-[4]) (../Graphs/2SAT.cpp
+[8]) (../Graphs/Dinics.cpp
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[5]) (../Graphs/EulerPathsD.cpp
-
-)
-
-[6] (../Graphs/EulerPathsND.cpp
+[9]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-)
+) (../Graphs/2SAT.cpp
 
-[7] (../Trees/LCA.cpp)
+[10]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-(../Trees/MinMaxWeight.cpp
 
-[8]) (../Trees/Centroid.cpp
+
+) (../Graphs/EulerPathsD.cpp
+
+[11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+) (../Graphs/EulerPathsND.cpp
+
+[12])
+
+(../Trees/LCA.cpp)
+
+[13] (../Trees/MinMaxWeight.cpp
+
+) (../Trees/Centroid.cpp
+
+[14]) (../Trees/EulerTour.cpp) (../Trees/TreeMatching.cpp
 
 ) (../Trees/Diameter.cpp
 
-[9]) (../Trees/HLD.cpp
+[15]) (../Trees/HLD.cpp
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[10])
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+[16])
+<Combi2.png, id=1505, 521.69907pt x 478.03593pt>
+File: Combi2.png Graphic file (type png)
+<use Combi2.png>
+Package pdftex.def Info: Combi2.png  used on input line 121.
+(pdftex.def)             Requested size: 142.26378pt x 130.35521pt.
+<Combi.png, id=1506, 402.75468pt x 405.01312pt>
+File: Combi.png Graphic file (type png)
+<use Combi.png>
+Package pdftex.def Info: Combi.png  used on input line 122.
+(pdftex.def)             Requested size: 142.26378pt x 143.06068pt.
 
 
 (../Strings/SuffixArray.cpp
 
-[11{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+[17{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./Combi2.
+png (PNG copy)> <./Combi.png (PNG copy)>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+) (../Others/binpow.cpp) (../Others/MatrixExp.cpp
+
+[18]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 )
 
-[12] 
+[19] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./Reference.aux)
  ***********
@@ -533,31 +582,27 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `Reference.out' has not changed.
-(rerunfilecheck)             Checksum: A93F8F8D56D1402D7EAB832E793767EB;4011.
+(rerunfilecheck)             Checksum: 702A5988EDDFC240C1796AE31B4B229F;5949.
  ) 
 Here is how much of TeX's memory you used:
- 14857 strings out of 475109
- 224414 string characters out of 5765325
- 1288369 words of memory out of 5000000
- 36743 multiletter control sequences out of 15000+600000
+ 15777 strings out of 475109
+ 238205 string characters out of 5765325
+ 1300369 words of memory out of 5000000
+ 37102 multiletter control sequences out of 15000+600000
  562519 words of font info for 51 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 80i,12n,82p,296b,2150s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 80i,12n,82p,316b,2150s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
-/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></
-usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texm
-f-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on Reference.pdf (12 pages, 216924 bytes).
+ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-di
+st/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on Reference.pdf (19 pages, 618037 bytes).
 PDF statistics:
- 1335 PDF objects out of 1440 (max. 8388607)
- 1282 compressed objects within 13 object streams
- 888 named destinations out of 1000 (max. 500000)
- 265 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2035 PDF objects out of 2073 (max. 8388607)
+ 1976 compressed objects within 20 object streams
+ 1402 named destinations out of 1440 (max. 500000)
+ 411 words of extra memory for PDF output out of 10000 (max. 10000000)
 
