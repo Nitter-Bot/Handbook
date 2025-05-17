@@ -23,7 +23,7 @@ public:
 
 	ll query(int l,int r){
 		Node s;
-		for(l+=n,r+=n ; l<r ; l>>=1 , r>>=1)
+		for(l+=n,r+=n ; l<r ; l>>=1 , r>>=1){
 			if(l&1)s = s+ tree[l++];
 			if(r&1)s = s+ tree[--r];
 		}
