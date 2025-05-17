@@ -1,3 +1,5 @@
+vector<vll> dist(n,vll(1001,INF64));
+vector<vector<bool>> vis(n,vector<bool> (1001,0));
 typedef array<ll,3> T;
 priority_queue<T ,vector<T>,greater<T>> pq;
 pq.push({0,0,state[0]});

@@ -14,6 +14,6 @@ while(!pq.empty()){
 			dist[v] = dist[u]+c;
 			pq.emplace(dist[v],v);
 			cnt[v] = cnt[u];
-		}else if(dist[u]+c == dist[v])(cnt[v]+=cnt[u])%=MOD
+		}else if(dist[u]+c == dist[v])(cnt[v]+=cnt[u])%=MOD;
 	}
 }
