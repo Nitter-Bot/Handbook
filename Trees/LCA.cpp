@@ -36,3 +36,8 @@ int kth(int u,int k){
 		if(k&(1<<i))u = par[u][i];
 	return u;
 }
+
+int isanc(int u, int g) {
+  int k = dep[u] - dep[g];
+  return k >= 0 && kth(u, k) == g;
+}

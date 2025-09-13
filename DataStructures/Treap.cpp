@@ -140,17 +140,17 @@ struct treap {
   //so first k+1 elements(0,1,2,...k) of the array from node t
   //will be split in left node and rest will be in right node
   void split(pnode t, pnode &l, pnode &r, int k, int add = 0) {
-    if(t == NULL) {
-      l = NULL;
-      r = NULL;
+    if(t == null) {
+      l = null;
+      r = null;
       return;
     }
     lazy_rev_upd(t);
     lazy_repl_upd(t);
     lazy_sum_upd(t);
     int idx = add + size(t->l);
-    if(t->l) t->l->par = NULL;
-    if(t->r) t->r->par = NULL; 
+    if(t->l) t->l->par = null;
+    if(t->r) t->r->par = null; 
     if(idx <= k)
       split(t->r, t->r, r, k, idx + 1), l = t;
     else
@@ -247,7 +247,7 @@ struct treap {
     split(root, l, r, qL - 1);
     split(r, mid, r, qR - qL);
 
-    mid->rev ^= 1;
+    if(mid)mid->rev ^= 1;
     merge(r, mid, r);
     merge(root, l, r);
   }
