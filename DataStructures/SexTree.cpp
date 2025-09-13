@@ -12,13 +12,9 @@ public:
 		tree.resize(2*n+1);
 	}
 
-	void build(vi &arr){
-		for(int i=0;i<n;i++)tree[n+i] = {arr[i]};
-		for(int i = n-1; i>0;i--)tree[i] = tree[i*2]+tree[i*2+1];
-	}
-
 	void update(int p, ll val){
-		for(tree[p+=n] = {val};p>1;p>>=1)tree[p>>1] = tree[p]+tree[p^1];
+		for(tree[p+=n] = {val};p>1;p>>=1)
+			tree[p>>1] = tree[p]+tree[p^1];
 	}
 
 	ll query(int l,int r){
