@@ -330,13 +330,7 @@ struct treap {
     cout << cur->val << ' ';
     inorder(cur->r);
   }
-  //print current array values serially
-  void print_array() {
-//      for(int i=0;i<size();i++) cout<<get_val(i)<<' ';
-//      cout<<nl;
-    inorder(root);
-    cout << nl;
-  }
+
   bool find(int val) {
     if(get_pos(val) == -1) return 0;
     else return 1;
