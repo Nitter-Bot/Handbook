@@ -74,7 +74,7 @@
 	\cppfile{../Graphs/BellmanFordPath.cpp}
 	\subsubsection{Cycle}
 	\cppfile{../Graphs/BellmanFordCycle.cpp}
-	
+		
 	\subsection{Floyd-Warshall}
 	\cppfile{../Graphs/FloydWarshall.cpp}
 	
@@ -113,7 +113,29 @@
 	\subsection{Diameter}
 	\cppfile{../Trees/Diameter.cpp}
 	\subsection{Heavy Light Decomposition}
-	\cppfile{../Trees/HLD.cpp}	
+	\cppfile{../Trees/HLD.cpp}
+	\subsection{Prufer Code}
+	\subsubsection{Build}
+	\cppfile{../Trees/PruferCodeBuild.cpp}
+	\subsubsection{Restore}
+	\cppfile{../Trees/PruferCodeRestore.cpp}
+	\subsubsection{Cayley's Formula}
+	Cayley's formula states that the number of spanning trees in a complete
+	labeled graph with $n$ vertices is equal to:
+	$$n^{n-2}$$
+
+	In fact any Prufer code with $n-2$ numbers from the interval  $[0; n-1]$ 
+	corresponds to some tree with $n$ vertices. So we have  $n^{n-2}$ different
+	such Prufer codes. Since each such tree is a spanning tree of a complete graph
+	with $n$ vertices, the number of such spanning trees is also
+	$n^{n-2}$.
+	
+	\subsubsection{Number of ways to make a graph connected}
+	
+	$$s_1 \cdot s_2 \cdots s_k \cdot (s_1 + s_2 + \dots + s_k)^{k-2} = s_1 \cdot s_2 \cdots s_k \cdot n^{k-2}$$
+
+	By accident this formula also holds for 
+	$k = 1$.
 	
 	\section{Math}
 	
