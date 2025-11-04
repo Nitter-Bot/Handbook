@@ -1,7 +1,7 @@
 vector<vi> adj(n+1),bcc(n+1);
 vi disc(n+1),low(n+1),who(n+1);
 stack<int> st;
-int Time = 0,sz = 0;
+int Time = 0,sz = 0,x;
 
 auto dfs = [&](auto &self,int u,int p)->void{
 	disc[u] = low[u] = ++Time;
@@ -12,7 +12,6 @@ auto dfs = [&](auto &self,int u,int p)->void{
 			low[u] = min(low[u],low[v]);
 			if(low[v] >= disc[u]){
 				sz++;
-				int x;
 				do{
 					x = st.top();
 					st.pop();
