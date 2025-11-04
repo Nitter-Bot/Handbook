@@ -10,6 +10,7 @@ void dfs(int u,int p){
 		if(v==p)continue;
 		if(!disc[v]){
 			dfs(v,u);
+			// <= for articulation points
 			if(disc[u]<low[v])bridge.emplace_back(u,v);
 			low[u] = min(low[u],low[v]);
 		}else{
