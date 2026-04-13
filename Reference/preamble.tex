@@ -1,85 +1,72 @@
-\documentclass[10pt,landscape,twocolumn,a4paper,notitlepage]{article}
-\usepackage{hyperref}
-\usepackage[english, activeacute]{babel}
+\documentclass[10pt,landscape,a4paper,oneside]{article}
 \usepackage[utf8]{inputenc}
-\usepackage{fancyhdr}
-\usepackage{lastpage}
+\usepackage[english]{babel}
 \usepackage{listings}
-\usepackage{amssymb}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{graphicx}
-\usepackage{wrapfig}
-\usepackage{amsmath}
-\usepackage{makeidx}
+\usepackage{amssymb, amsmath}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{hyperref}
 
-%%% Margenes
-\setlength{\columnsep}{0.25in}    % default=10pt
-\setlength{\columnseprule}{0.5pt}    % default=0pt (no line)
+% --- Configuración de Márgenes (Máximo aprovechamiento) ---
+\geometry{top=1cm, bottom=1cm, left=0.8cm, right=0.8cm, headsep=0.2cm}
 
-\addtolength{\textheight}{2.35in}
-\addtolength{\topmargin}{-0.9in}     % ~ -0.5 del incremento anterior
+% --- Multicols ---
+\setlength{\columnsep}{0.5cm}      % Espacio entre columnas
+\setlength{\columnseprule}{0.1pt}  % Línea divisoria fina
 
-\addtolength{\textwidth}{1.1in}
-\addtolength{\oddsidemargin}{-0.55in} % -0.5 del incremento anterior
-
-\setlength{\headsep}{0.08in}
-\setlength{\parskip}{0in}
-\setlength{\headheight}{15pt}
-\setlength{\parindent}{0mm}
-
-%%% Encabezado y pie de pagina
+% --- Estilo de Página ---
 \pagestyle{fancy}
-\fancyhead[LO]{\textbf{\title}}
-\fancyhead[C]{\leftmark\ -\ \rightmark}
-\fancyhead[RO]{Page \thepage\ of \pageref{LastPage}}
-\renewcommand{\headrulewidth}{0.4pt}
-\fancyfoot{}
-\definecolor{darkblue}{rgb}{0,0,0.4}
-%%% Configuracion de Listings
-\lstloadlanguages{C++}
-\lstnewenvironment{code}
-{%\lstset{    numbers=none, frame=lines, basicstyle=\small\ttfamily, }%
-	\csname lst@SetFirstLabel\endcsname}
-{\csname lst@SaveFirstLabel\endcsname}
-\lstset{% general command to set parameter(s)
-	language=C++, basicstyle=\small\ttfamily, keywordstyle=\slshape,
-	emph=[1]{tipo,usa}, emphstyle={[1]\sffamily\bfseries},
-	morekeywords={tint,forn,forsn,fore},
-	basewidth={0.47em,0.40em},
-	columns=fixed, fontadjust, resetmargins, xrightmargin=5pt, xleftmargin=15pt,
-	flexiblecolumns=false, tabsize=2, breaklines, breakatwhitespace=false, extendedchars=true,
-	numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=9pt,
-	frame=l, framesep=3pt,
-	basicstyle=\ttfamily,
-	keywordstyle=\color{darkblue}\ttfamily,
-	stringstyle=\color{magenta}\ttfamily,
-	commentstyle=\color{RedOrange}\ttfamily,
-	morecomment=[l][\color{OliveGreen}]{\#}
-}
+\fancyhf{}
+\fancyhead[L]{\textbf{:Alianza de Autismo de Puerto Rico}}
+\fancyhead[R]{Page \thepage} % Solo "Page X" como pediste
+\renewcommand{\headrulewidth}{0.2pt}
 
+% --- Títulos Compactos ---
+\definecolor{darkblue}{rgb}{0,0,0.5}
+
+% Secciones: Barra azul sutil
+\titleformat{\section}{\color{darkblue}\normalfont\normalsize\bfseries}{\thesection}{1em}{}[{\titlerule[0.5pt]}]
+\titlespacing*{\section}{0pt}{2pt}{2pt}
+
+% Subsecciones: Texto en negrita pequeño
+\titleformat{\subsection}{\normalfont\scriptsize\bfseries}{\thesubsection}{0.5em}{}
+\titlespacing*{\subsection}{0pt}{1pt}{0pt}
+
+% --- Configuración de C++ (Tu estilo pero compacto) ---
+\definecolor{commentgreen}{rgb}{0,0.4,0}
 \lstdefinestyle{C++}{
-	language=C++, basicstyle=\small\ttfamily, keywordstyle=\slshape,
-	emph=[1]{tipo,usa,tipo2}, emphstyle={[1]\sffamily\bfseries},
-	morekeywords={tint,forn,forsn,fore},
-	basewidth={0.47em,0.40em},
-	columns=fixed, fontadjust, resetmargins, xrightmargin=5pt, xleftmargin=15pt,
-	flexiblecolumns=false, tabsize=2, breaklines, breakatwhitespace=false, extendedchars=true,
-	numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=9pt,
-	frame=l, framesep=3pt,
-	basicstyle=\ttfamily,
-	keywordstyle=\color{darkblue}\ttfamily,
-	stringstyle=\color{magenta}\ttfamily,
-	commentstyle=\color{RedOrange}\ttfamily,
-	morecomment=[l][\color{OliveGreen}]{\#}
+    language=C++,
+    basicstyle=\ttfamily\scriptsize, % Tamaño ideal para 3 columnas
+    keywordstyle=\color{darkblue}\bfseries,
+    commentstyle=\color{commentgreen},
+    stringstyle=\color{magenta},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    numbersep=4pt,
+    breaklines=true,
+    tabsize=2,
+    showstringspaces=false,
+    columns=fullflexible,
+    keepspaces=true,
+    xleftmargin=10pt,
+    frame=none
 }
 
-%%% Macros
-\def\nbtitle#1{\begin{Large}\begin{center}\textbf{#1}\end{center}\end{Large}}
-\def\nbsection#1{\section{#1}}
-\def\nbsubsection#1{\subsection{#1}}
-\def\nbcoment#1{\begin{small}\textbf{#1}\end{small}}
-\newcommand{\comb}[2]{\left( \begin{array}{c} #1 \\ #2 \end{array}\right)}
-\def\complexity#1{\texorpdfstring{$\mathcal{O}(#1)$}{O(#1)}}
-\newcommand\cppfile[2][]{
-	\lstinputlisting[style=C++]{#2}
+% --- TUS COMANDOS ---
+
+% 1. Tu comando original (para que no rompa lo que ya tienes)
+\newcommand\cppfile[1]{
+    \lstinputlisting[style=C++]{#1}
 }
+
+% 2. La "solución chida": Agrega título al índice, a la página y el código de un tiro
+% Uso: \algo{Nombre del Algoritmo}{ruta/archivo.cpp}
+\newcommand{\algo}[2]{
+    \subsection{#1} 
+    \cppfile{#2}
+}
+
+\newcommand{\nbtitle}[1]{{\centering\Large\textbf{#1}\par}\vspace{0.2cm}}
