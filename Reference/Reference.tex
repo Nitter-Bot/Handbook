@@ -1,180 +1,97 @@
 \input{preamble.tex}
+
 \begin{document}
-	\tableofcontents
-	
-	\newpage
-	
-	\section{Template}
-	\cppfile{../plantilla.cpp}
-	
+	\nbtitle{ }
+	\begin{multicols}{3}
+	    \tableofcontents
+	\end{multicols}
+
 	\newpage
 
-	\section{Data structures}
-	
-	\subsection{Segment Tree}
-	\cppfile{../DataStructures/SexTree.cpp}
-	\newpage
-	\subsection{Merge Sort Tree}
-	\cppfile{../DataStructures/MergeSortTree.cpp}
-	\newpage
-	\subsection{Fenwick Tree}
-	\cppfile{../DataStructures/FenwickTree.cpp}
-	\newpage
-	\subsection{Sparse Table}
-	\cppfile{../DataStructures/SparseTable.cpp}
-	\newpage
-	\subsection{Disjoint Set Union}
-	\cppfile{../DataStructures/DSU.cpp}
-	\newpage
-	\subsection{Lazy SegTree}
-	\cppfile{../DataStructures/LazySexTree.cpp}
-	\subsection{Implicit Treap}
-	\cppfile{../DataStructures/Treap.cpp}
-	\subsection{Trie}
-	\cppfile{../DataStructures/Trie.cpp}
-	% To add
-	%	Persistent Sextree
-	%	Segment Tree multi dim
-	%	Wavelet Tree
-	%	BST
-	%	Link cut tree
-	%	Monotonic ds
-	
-	
-	
-	
-	
-	\section{Graphs}
-	\subsection{DFS}
-	\cppfile{../Graphs/dfs.cpp}
-	\subsection{BFS}
-	\cppfile{../Graphs/bfs.cpp}
-	\subsection{Topological Sort}
-	\cppfile{../Graphs/topoSort.cpp}
-	\subsection{Flood Fill}
-	\cppfile{../Graphs/FloodFill.cpp}
-	
-	
-	\subsection{MST}
-	\subsubsection{Kruskal}
-	\cppfile{../Graphs/Kruskal.cpp}
-	
-	\newpage
-	
-	\subsubsection{Prims}
-	\cppfile{../Graphs/Prims.cpp}
-	
-	\subsection{Dijkstra}
-	\subsubsection{Implementation}
-	\cppfile{../Graphs/Dijkstra.cpp}
-	\subsubsection{Space-State graph}
-	\cppfile{../Graphs/StateSpace.cpp}
-	\subsection{Bellman-Ford}
-	\subsubsection{Path}
-	\cppfile{../Graphs/BellmanFordPath.cpp}
-	\subsubsection{Cycle}
-	\cppfile{../Graphs/BellmanFordCycle.cpp}
+	\begin{multicols*}{3}
+
+		\section{Template}
+		\cppfile{../plantilla.cpp}
+
+		\section{Data Structures}
+		\algo{Segment Tree}{../DataStructures/SexTree.cpp}
+		\algo{Merge Sort Tree}{../DataStructures/MergeSortTree.cpp}
+		\algo{Segment Tree Recursive}{../DataStructures/SexTreeRecursive.cpp}
+		\algo{Lazy}{../DataStructures/LazySexTree.cpp}
+		\algo{Persistent Segment Tree}{../DataStructures/PersistenSeg.cpp}
+		\algo{Dynamic Segment Tree}{../DataStructures/DynamicSeg.cpp}
+		\algo{Sparse Table}{../DataStructures/SparseTable.cpp}
+		\algo{Treap}{../DataStructures/Treap.cpp}
+		\algo{BIT}{../DataStructures/FenwickTree.cpp}
+		\algo{DSU}{../DataStructures/DSU.cpp}
+		\algo{Trie}{../DataStructures/Trie.cpp}
+
+
+		\section{Graphs}
+		\algo{2-SAT}{../Graphs/2SAT.cpp}
+		\algo{Block Cut Tree}{../Graphs/BCT.cpp}
+		\algo{Bellman-Ford Cycle}{../Graphs/BellmanFordCycle.cpp}
+		\algo{Bellman-Ford Path}{../Graphs/BellmanFordPath.cpp}
+		\algo{BFS}{../Graphs/bfs.cpp}
+		\algo{Bipartite Check}{../Graphs/bipartite.cpp}
+		\algo{Bridges}{../Graphs/Bridge.cpp}
+		\algo{Bridge Tree}{../Graphs/BridgeTree.cpp}
+		\algo{DFS}{../Graphs/dfs.cpp}
+		\algo{Dijkstra}{../Graphs/Dijkstra.cpp}
+		\algo{Dinic}{../Graphs/Dinics.cpp}
+		\algo{Euler Path Directed}{../Graphs/EulerPathsD.cpp}
+		\algo{Euler Path Undirected}{../Graphs/EulerPathsND.cpp}
+		\algo{Flood Fill}{../Graphs/FloodFill.cpp}
+		\algo{Floyd-Warshall}{../Graphs/FloydWarshall.cpp}
+		\algo{Kruskal}{../Graphs/Kruskal.cpp}
+		\algo{MCMF}{../Graphs/MCMF.cpp}
+		\algo{Prims}{../Graphs/Prims.cpp}
+		\algo{SCC Kosaraju}{../Graphs/Scc.cpp}
+		\algo{State Space Graph}{../Graphs/StateSpace.cpp}
+		\algo{Topological Sort}{../Graphs/topoSort.cpp}
 		
-	\subsection{Floyd-Warshall}
-	\cppfile{../Graphs/FloydWarshall.cpp}
-	
-	\subsection{SCC Kosaraju}
-	\cppfile{../Graphs/Scc.cpp}
-	\subsection{Flows}
-	\subsubsection{Dinic}
-	\cppfile{../Graphs/Dinics.cpp}
-	\subsection{2-SAT}
-	\cppfile{../Graphs/2SAT.cpp}
-	\subsection{Euler Paths and cycles}
-	\subsubsection{Directed Graphs}
-	\cppfile{../Graphs/EulerPathsD.cpp}
-	\subsubsection{Unirected Graphs}
-	\cppfile{../Graphs/EulerPathsND.cpp}
-	\subsection{Bridges}
-	\cppfile{../Graphs/Bridge.cpp}
-	\subsubsection{BridgeTree}
-	\cppfile{../Graphs/BridgeTree.cpp}
-	\subsection{Block Cut Tree}
-	\cppfile{../Graphs/BCT.cpp}
+		\section{Trees}
+		\algo{Centroid Decomposition}{../Trees/Centroid.cpp}
+		\algo{Tree Diameter}{../Trees/Diameter.cpp}
+		\algo{Euler Tour}{../Trees/EulerTour.cpp}
+		\algo{Heavy Light Decomposition}{../Trees/HLD.cpp}
+		\algo{LCA}{../Trees/LCA.cpp}
+		\algo{Min/Max Weight on Path}{../Trees/MinMaxWeight.cpp}
+		\algo{Intersection Path}{../Trees/Intersection\_Tree.cpp}
+		\algo{Union Path}{../Trees/Path\_Union\_Tree.cpp}
+		\algo{Prufer Code Build}{../Trees/PruferCodeBuild.cpp}
+		\algo{Prufer Code Restore}{../Trees/PruferCodeRestore.cpp}
+		\algo{Tree Rerooting}{../Trees/Reroot.cpp}
+		\algo{Tree Matching}{../Trees/TreeMatching.cpp}
+		\algo{Rooted Tree Hashing}{../Trees/HashTree.cpp}
+		\algo{Tree Isomorphism}{../Trees/Isomorphics.cpp}
 
-	\newpage
+		\section{Number Theory}
+		%To add
 	
-	\section{Trees}
-	\subsection{LCA - Binary Lifting}
-	\subsubsection{Normal LCA}
-	\cppfile{../Trees/LCA.cpp}
-	\subsubsection{Min/Max weight on the path}
-	\cppfile{../Trees/MinMaxWeight.cpp}
-	\subsubsection{Union path}
-	\cppfile{../Trees/Path_Union_Tree.cpp}
-	\subsubsection{Intersection Path}
-	\cppfile{../Trees/Intersection_Tree.cpp}
-	\subsection{Centroid Decomposition}
-	\cppfile{../Trees/Centroid.cpp}
-	\subsection{Euler Tour Technique}
-	\cppfile{../Trees/EulerTour.cpp}
-	\subsection{Tree Matching}
-	\cppfile{../Trees/TreeMatching.cpp}
-	\subsection{Diameter}
-	\cppfile{../Trees/Diameter.cpp}
-	\subsection{Heavy Light Decomposition}
-	\cppfile{../Trees/HLD.cpp}
-	\subsection{Prufer Code}
-	\subsubsection{Build}
-	\cppfile{../Trees/PruferCodeBuild.cpp}
-	\subsubsection{Restore}
-	\cppfile{../Trees/PruferCodeRestore.cpp}
-	\subsubsection{Cayley's Formula}
-	Cayley's formula states that the number of spanning trees in a complete
-	labeled graph with $n$ vertices is equal to:
-	$$n^{n-2}$$
+		\section{Combinatorics}
+		\algo{nCr}{../Combinatory/combi.cpp}
 
-	In fact any Prufer code with $n-2$ numbers from the interval  $[0; n-1]$ 
-	corresponds to some tree with $n$ vertices. So we have  $n^{n-2}$ different
-	such Prufer codes. Since each such tree is a spanning tree of a complete graph
-	with $n$ vertices, the number of such spanning trees is also
-	$n^{n-2}$.
-	
-	\subsubsection{Number of ways to make a graph connected}
-	
-	$$s_1 \cdot s_2 \cdots s_k \cdot (s_1 + s_2 + \dots + s_k)^{k-2} = s_1 \cdot s_2 \cdots s_k \cdot n^{k-2}$$
+		\section{Math}
+		\algo{FFT}{../Math/FFT.cpp}
+		\algo{FWDT}{../Math/FWDT.cpp}
+		\algo{Xor Basis}{../Math/XOR\_Basis.cpp}
+		\algo{Matrix}{../Math/MatrixExp.cpp}
 
-	By accident this formula also holds for 
-	$k = 1$.
-	
-	\section{Math}
-	
-	\subsection{FFT}
-	\cppfile{../Math/FFT.cpp}
-	
-	\subsubsection{XOR}
-	$$ a + b = a \oplus b + 2(a\& b)$$
-	$$a + b = a|b + a\&b$$
-	$$a \oplus b = a|b - a\&b$$
-	$$1\oplus 2\oplus 3 \oplus \dots \oplus(4k-1) = 0  k>=0$$
-	
-	
-	
-	
-	\subsection{Theorems}
-	
-	
-	\section{Strings}
-	\subsection{Hashing}
-	\subsubsection{Rolling Hashing}
-	\cppfile{../Strings/Hashing.cpp}
-	\subsection{Suffix Array}
-	\cppfile{../Strings/SuffixArray.cpp}
-	
-	
-	
-	\section{Others}
-	\subsection{Binpow}
-	\cppfile{../Others/binpow.cpp}
-	\subsection{Matrix exponentiation}
-	\cppfile{../Others/MatrixExp.cpp}
-	\subsection{Random}
-	\cppfile{../Others/random.cpp}
-	
-	
+		\section{Strings}
+		\algo{Aho Corasick}{../Strings/AhoCorasick.cpp}
+		\algo{Dynamic Aho Corasick}{../Strings/DynamicAho.cpp}
+		\algo{Suffix Array}{../Strings/SuffixArray.cpp}
+		\algo{Hashing}{../Strings/Hashing.cpp}
+
+		\section{Dp}
+		\algo{Convex Hull Trick}{../DP/CHT.cpp}
+		\algo{Knuth Division}{../DP/Knuth.cpp}
+		\algo{Li Chao Tree}{../DP/LiChaoTree.cpp}
+
+		\section{Miscellaneous}
+		\algo{Rnd template}{../Others/random.cpp}
+
+	\end{multicols*}
+
 \end{document}
