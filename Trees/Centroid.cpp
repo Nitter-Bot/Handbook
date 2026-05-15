@@ -1,49 +1,41 @@
-class Centroid{
-private:
-	vector<vi> tree;
-	vi par;
-	vi sub;
-	vector<bool> check;
-	int n;
-public:	
-	Centroid(vector<vi> &t):tree(t){
-		n = tree.size();
-		par.resize(n);
-		sub.resize(n);
-		check.resize(n);
-		build();
-	}
+vector<bool> removed(n+1);
+vi sub(n+1);
 
-	void build(int u = 0, int p = -1){
-		dfs(u, p);
-		int c = get_centroid(u,p,sub[u]);
-		check[c] = 1;
-		par[c] = p+1;
-
-		for (auto v : tree[c]){
-			if(!check[v])
-				build(v, c);
+auto dfs = [&](auto &self,int u,int p)->void{
+	sub[u] = 1;
+	for(int v:adj[u]){
+		if(v!=p && !removed[v]){
+			self(self,v,u);
+			sub[u] += sub[v];
 		}
-	
 	}
+};
 
-	int dfs(int u,int p){
-		if(check[u])return 0;
-		sub[u] = 1;
-		for(int v:tree[u])
-			if(v!=p)sub[u]+=dfs(v,u);
-
-		return sub[u];
+auto centroid = [&](auto &self,int u,int p,int root)->int{
+	for(int v:adj[u]){
+		if(v!=p && !removed[v]){
+			if(sub[v]*2 > sub[root])
+				return self(self,v,u,root);
+		}
 	}
+	return u;
+};
 
-	int get_centroid(int u,int p,int x){
-		for(auto v:tree[u])
-			if(v!=p && sub[v]*2>x && !check[v])return get_centroid(v,u,x);
+auto info = [&](auto &self,int u,int p,int d,vi &aux)->void{
+	d ^= a[u-1];
+	aux.pb(d);
+	for(int v:adj[u])
+		if(v!=p && !removed[v])
+			self(self,v,u,d,aux);
+};
 
-		return u;
-	}
-
-	int operator[](int i){
-		return par[i];
+auto decompose = [&](auto &self,int u,int p)->void{
+	dfs(dfs,u,p);
+	int c = centroid(centroid,u,p,u);
+	//get info
+	removed[c] = 1;
+	for(int v:adj[c]){
+		if(v!=p && !removed[v])
+			self(self,v,c);
 	}
 };
