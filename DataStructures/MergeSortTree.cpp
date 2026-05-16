@@ -1,26 +1,23 @@
+// Hash: #545fdb
 struct Node{
 	vi val;
 
 	int search(int x){
-		int l = 0, r = sz(val)-1;
-		while(l<=r){
-			int m = l+(r-l)/2;
-			if(val[m] < x)l =m+1;
-			else r = m-1;
-		}
-		return sz(val)-l;
+		// cnt >= x
+		auto it = lower_bound(all(val), x);
+		return val.end() - it; // #c83330
+		// cnt > x
+		//auto it = upper_bound(all(val), x);
+		//return val.end() - it; // #fe1bbd
+		// cnt == x
+		//auto l_it = lower_bound(all(val), x);
+		//auto u_it = upper_bound(all(val), x);
+		//return u_it - l_it; // #281439
 	}
 };
 
 Node operator+(Node a,Node b){
-	int i=0,j=0;
 	Node aux;
-	while (i< sz(a.val) && j<sz(b.val)){
-		if (a.val[i]< b.val[j] ) aux.val.pb(a.val[i++]);
-		else aux.val.pb(b.val[j++]);
-	}
-	while (i<sz(a.val)) aux.val.pb(a.val[i++]);
-	while (j<sz(b.val)) aux.val.pb(b.val[j++]);
-	return aux;
-}
-//Call segment Tree
+	aux.val.resize(sz(a.val) + sz(b.val));
+	merge(all(a.val), all(b.val), aux.val.begin());
+} // #086024
