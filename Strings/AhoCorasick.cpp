@@ -47,4 +47,18 @@ struct AC{
 			}
 		}
 	}
+
+	int count(string &s){
+		ll ans = 0;
+		int u = 0;
+		for(char c:s){
+			u = t[u].ch[c - 'a'];
+			int temp = u;
+			while(temp > 0){
+				ans += t[temp].id.size();
+				temp = t[temp].last_m;
+			}
+		}
+		return ans;
+	}
 };

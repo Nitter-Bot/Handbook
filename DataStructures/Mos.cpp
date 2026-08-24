@@ -8,7 +8,7 @@ struct Query{
 	int l, r, idx;
 	bool operator<(Query other) const
 	{
-		return make_pair(l / block_size, r) < 
+		return make_pair(l / block_size, r) <
 			make_pair(other.l / block_size, other.r);
 	}
 }; // #8e89a9

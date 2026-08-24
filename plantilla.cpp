@@ -1,3 +1,5 @@
+// :'<,'>w !sed 's/\/\/.*//' | tr -d '[:space:]' | tr A-Z a-z | md5sum | cut -c-6
+//echo "vnoremap <space>h :w !sed 's/\/\/.*//' | tr -d '[:space:]' | tr A-Z a-z | md5sum | cut -c-6<CR>" >> ~/.vimrc
 #include <bits/stdc++.h>
 
 using namespace std;

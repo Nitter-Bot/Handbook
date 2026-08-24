@@ -1,19 +1,18 @@
-const int MAX = 1e5+5,LG=18;
-vi deep(MAX);//Si tiene peso vi cost(MAX)
-int par[MAX][LG+1];
+const int LG = 18;
 
-void dfs(int u = 1,int p=0){// U = raiz del arbol
+vi deep(n+1);
+vector<vi> par(n+1,vi(LG+1));
+
+auto dfs = [&](auto &self,int u,int p)->void{
 	par[u][0] = p;
 	deep[u] = deep[p]+1;//cost[u] += cost[p]
 	for(int i=1;i<=LG;i++)par[u][i]=par[par[u][i-1]][i-1];
-	for(int v:adj[u]){
-		if(v!=p){
-			dfs(v,u);
-		}
-	}
-}
+	for(int v:adj[u])
+		if(v!=p)
+			self(self,v,u);
+};
 
-int lca(int u,int v){
+auto lca = [&](int u,int v)->int{
 	if(deep[u] < deep[v])swap(u,v);
 	for(int k=LG;k>=0;k--)
 		if(deep[par[u][k]] >= deep[v])
@@ -23,21 +22,21 @@ int lca(int u,int v){
 		if(par[u][k]!=par[v][k])
 			u=par[u][k],v=par[v][k];
 	return par[u][0];
-}
+};
 
-int dist(int u,int v){
+auto dist = [&](int u,int v)->int{
 	int lc = lca(u,v);
 	return deep[u]+deep[v]-(deep[lc]<<1);
-}
+};
 
-int kth(int u,int k){
+auto kth = [&](int u, int k)->int{
 	assert(k>=0);
 	for(int i=0;i<=LG;i++)
 		if(k&(1<<i))u = par[u][i];
 	return u;
-}
+};
 
-int isanc(int u, int g) {
-  int k = dep[u] - dep[g];
-  return k >= 0 && kth(u, k) == g;
-}
+auto isanc = [&](int u,int g)->bool{
+	int k = deep[u]-deep[g];
+	return k >= 0 && kth(u, k) == g;
+};
