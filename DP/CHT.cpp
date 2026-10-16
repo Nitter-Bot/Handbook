@@ -30,6 +30,7 @@ struct CHT {
 		return f(ptr, x);
 	} // #19a165
 
+	// O(log(sz(m))) , but does not need x queries to be ordered
 	ll bs(int l, int r, ll x){
 		int mid = (l + r) / 2;
 		if(mid + 1 < m.size() && f(mid + 1, x) < f(mid, x)) return bs(mid + 1, r, x); // > for max
