@@ -21,11 +21,12 @@ struct CHT {
 
 	ll f(int i, ll x){return m[i] * x + b[i];} // #d77a99
 
+	// O(1) amortized, if x queries are in the correct order
 	//(slope dec+query min), (slope inc+query max) -> x increasing
 	//(slope dec+query max), (slope inc+query min) -> x decreasing
 	ll query(ll x){
 		if(ptr >= sz(m))ptr = m.size() - 1;
-		while(ptr < sz(m)-1 && f(ptr + 1, x)<f(ptr, x))ptr++;
+		while(ptr < sz(m)-1 && f(ptr + 1, x)<f(ptr, x))ptr++; // > for max
 		return f(ptr, x);
 	} // #19a165
 
