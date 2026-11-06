@@ -1,12 +1,3 @@
-#include <bits/stdc++.h>
- 
-#define ll long long
-#define sz(x) ((int) (x).size())
-#define all(x) (x).begin(), (x).end()
-#define vi vector<int>
-#define pii pair<int, int>
-#define rep(i, a, b) for(int i = (a); i < (b); i++)
-using namespace std;
 template<typename T>
 using minpq = priority_queue<T, vector<T>, greater<T>>;
  
@@ -17,47 +8,21 @@ struct pt {
     ftype x, y;
     pt(ftype x = 0, ftype y = 0) : x(x), y(y) {}
 
-    // vector addition, subtraction, scalar multiplication
-    pt operator+(const pt &o) const {
-        return pt(x + o.x, y + o.y);
-    }
-    pt operator-(const pt &o) const {
-        return pt(x - o.x, y - o.y);
-    }
-    pt operator*(const ftype &f) const {
-        return pt(x * f, y * f);
-    }
+    pt operator+(const pt &o) const {return pt(x + o.x, y + o.y);}
+    pt operator-(const pt &o) const {return pt(x - o.x, y - o.y);}
+    pt operator*(const ftype &f) const {return pt(x * f, y * f;}
 
-    // rotate 90 degrees counter-clockwise
-    pt rot() const {
-        return pt(-y, x);
-    }
+    pt rot() const {return pt(-y, x);}
 
-    // dot and cross products
-    ftype dot(const pt &o) const {
-        return x * o.x + y * o.y;
-    }
-    ftype cross(const pt &o) const {
-        return x * o.y - y * o.x;
-    }
-
-    // length
-    ftype len() const {
-        return hypotl(x, y);
-    }
-
-    // compare points lexicographically
-    bool operator<(const pt &o) const {
-        return make_pair(x, y) < make_pair(o.x, o.y);
-    }
+    ftype dot(const pt &o) const {return x * o.x + y * o.y;}
+    ftype cross(const pt &o) const {return x * o.y - y * o.x;}
+    ftype len() const {return hypotl(x, y);}
+    bool operator<(const pt &o) const {return make_pair(x, y) < make_pair(o.x, o.y);}
 };
 
 // check if two vectors are collinear. It might make sense to use a
 // different EPS here, especially if points have integer coordinates
-bool collinear(pt a, pt b) {
-    return abs(a.cross(b)) < EPS;
-}
-
+bool collinear(pt a, pt b) { return abs(a.cross(b)) < EPS; }
 
 // intersection point of lines ab and cd. Precondition is that they aren't collinear
 pt lineline(pt a, pt b, pt c, pt d) {
@@ -82,7 +47,6 @@ struct arc {
     arc(pt p, pt q, int i) : p(p), q(q), i(i) {}
 
     // get y coordinate of intersection with following arc.
-    // don't question my magic formulas
     ftype gety(ftype x) const {
         if(q.y == INF) return INF;
         x += EPS;
@@ -118,7 +82,7 @@ struct event {
 };
 
 struct fortune {
-    beach line; // self explanatory
+    beach line;
     vector<pair<pt, int>> v; // (point, original index)
     priority_queue<event> Q; // priority queue of point and vertex events
     vector<pii> edges; // delaunay edges
