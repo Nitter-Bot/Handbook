@@ -20,7 +20,7 @@ void xormul(vector<ll> a, vector<ll> b, vector<ll> &c) {
     // Obtener c transformada
 	for (ll i = 0; i < m; i++)
 		c[i] = a[i] * b[i] % MOD;
-    // Quitar transformación a c
+    // Quitar transformacion a c
 	for (ll n = 1; n < m; n *= 2)
 		for (ll i = 0; i < m; i += 2 * n)
 			for (ll j = 0; j < n; j++) {

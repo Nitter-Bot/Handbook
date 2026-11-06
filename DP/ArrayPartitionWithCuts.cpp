@@ -27,7 +27,7 @@ inline ll cost(int l, int r) {       // cost of block [l, r] (1-indexed), l..r m
 }
 
 vector<ll> prevDp, curDp;
-vector<vector<int>> cuts; // cortes anteriores para cada posición
+vector<vector<int>> cuts; // cortes anteriores para cada posicion
 vector<vector<int>> ncuts; // nuevos cortes
 
 void solve(int ilo, int ihi, int plo, int phi) {
