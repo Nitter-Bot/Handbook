@@ -91,7 +91,7 @@ struct fortune {
     fortune(vector<pt> p) {
         n = sz(p);
         v.resize(n);
-        rep(i, 0, n) v[i] = {p[i], i};
+        for(int i = 0; i < n; i++) v[i] = {p[i], i};
         sort(all(v)); // sort points by coordinate, remember original indices for the delaunay edges
     }
     // update the remove event for the arc at position it
@@ -143,7 +143,7 @@ struct fortune {
         line.insert(arc(pt(-X, -X), pt(-X, X), -1));
         line.insert(arc(pt(-X, X), pt(INF, INF), -1));
         // create all point events
-        rep(i, 0, n) {
+        for(int i = 0; i < n; i++) {
             Q.push(event(v[i].first.x, i, line.end()));
         }
         ti = 0;
