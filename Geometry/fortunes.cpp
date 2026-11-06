@@ -10,7 +10,7 @@ struct pt {
 
     pt operator+(const pt &o) const {return pt(x + o.x, y + o.y);}
     pt operator-(const pt &o) const {return pt(x - o.x, y - o.y);}
-    pt operator*(const ftype &f) const {return pt(x * f, y * f;}
+    pt operator*(const ftype &f) const {return pt(x * f, y * f);}
 
     pt rot() const {return pt(-y, x);}
 
